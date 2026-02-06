@@ -13,9 +13,10 @@ body{
     display: grid;
     max-width: 1200px;
     grid-template-columns: 350px 1fr;
-    gap: 40px;
+    gap: 50px;
 padding-top: 40px;
 margin: auto;
+
 
 }
 
@@ -25,17 +26,21 @@ margin: auto;
     border: 1px solid #3a3a3a;
     border-radius: 16px;
     padding: 40px;
+    position: sticky;
+    top:40px;
+   
 
 }
 
 .main-content{
-    height: 90vh;
     background-color: #2a2a2a ;
     border: 1px solid #3a3a3a;
     border-radius: 16px;
+    padding: 40px;
 
 }
 
+/* Profile Information*/
 .profile{
     text-align: center;
 }
@@ -56,8 +61,248 @@ color: #e0e0e0;
     background-color: #1e1e1e;
     padding: 5px 15px;
     color: #FFBF00;
+     border: 1px solid #3a3a3a;
     font-size: 0.8rem;
     border-radius: 8px;
     display: inline-block;
-    margin: 10px;
+    margin-top: 10px;
+}
+
+/* Contact Information*/
+.contact{
+margin-top: 30px;
+border-top: 2px solid #3a3a3a;
+padding-top: 20px;
+}
+.label{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+
+}
+.value{
+    color: #e0e0e0;
+    text-decoration: none;
+}
+.email, .phone{
+    margin-bottom: 15px;
+}
+
+/* Social Information*/
+.social{
+margin-top: 30px;
+border-top: 2px solid solid #3a3a3a;
+padding-top: 20px;
+text-align: center;
+}
+
+.social img{
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
+    filter: grayscale(1) invert(0.7);
+    transition: 0.3s ease;
+}
+.social img:hover{
+filter: grayscale(0) invert(0);
+}
+
+#navigation{
+    
+     border-bottom: 2px solid #3a3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+    text-decoration: none;
+   
+   
+}
+nav a{
+    text-decoration: none;
+    color:#a0a0a0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    
+   
+}
+.active, nav a:hover{
+    color: #FFBF00;
+}
+/*About me*/
+.heading{
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.line{
+    width:60px;
+    height:5px;
+    background-color: #FFBF00;
+    margin-bottom: 30px;
+}
+.content{
+    text-align: justify;
+    color: #a0a0a0;
+}
+
+#about{
+    margin-bottom: 30px;
+}
+
+/*skills section */
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap:30px;
+
+
+}
+
+.item{
+  padding: 20px;
+    border-radius: 10px;
+    border:2px solid #3a3a3a;
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item img{
+    height:48px;
+    width:48px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+    margin-bottom: 15px;
+}
+.item h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.item:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Portfolio*/
+
+ #education{
+    margin-top: 20px;
+ }
+ 
+ .edtech{
+    position: relative;
+    margin-top: 20px;
+ }
+ .edfirst{
+   margin-bottom: 30px;
+    padding-left: 25px;
+    position: relative;
+ }
+ .year{
+    font-size: 0.9rem;
+    color:#a0a0a0;
+    margin-bottom: 5px;
+ }
+ .degree{
+    color:#e0e0e0;
+    font-size: 1.2rem;
+    font-weight:500;
+    margin-bottom: 5px;
+ }
+ .college{
+    font-style: italic;
+    color:#a0a0a0;
+    margin-bottom: 10px;
+ }
+ .work{
+    color:#a0a0a0;
+ }
+ .goal{
+    height:15px;
+    width:15px;
+    border: 3px solid #FFBF00;
+        border-radius: 50%;
+        position: absolute;
+        top:5px;
+        left:0px;
+        z-index: 1;
+ }
+ .liner{
+    position: absolute;
+    width: 2px;
+    top:0;
+    bottom: 0px;
+    left:5px;
+    border: 2px solid #3a3a3a;
+ }
+ /*Education*/
+ .project-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:25px;
+ }
+ .project img{
+    height:180px;
+    width:100%;
+    object-fit: cover;
+ }
+.project{
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+ .project:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+ .card{
+    padding: 30px;
+ }
+
+ .card h3{
+    color: #e0e0e0;
+    margin-bottom: 15px;
+ }
+ .card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.card span{
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+@media screen and (max-width:750px) {
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+
+    #navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        position: static;
+
+    }
 }
