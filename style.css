@@ -91,9 +91,10 @@ padding-top: 20px;
 /* Social Information*/
 .social{
 margin-top: 30px;
-border-top: 2px solid solid #3a3a3a;
+border-top: 2px solid  #3a3a3a;
 padding-top: 20px;
 text-align: center;
+line-height: 0;
 }
 
 .social img{
@@ -102,6 +103,7 @@ text-align: center;
     margin-left: 5px;
     filter: grayscale(1) invert(0.7);
     transition: 0.3s ease;
+   
 }
 .social img:hover{
 filter: grayscale(0) invert(0);
@@ -119,12 +121,11 @@ nav{
     display: flex;
     justify-content: flex-end;
     gap:20px;
-    text-decoration: none;
-   
-   
+    text-decoration: none; 
 }
 nav a{
     text-decoration: none;
+   display: inline-block;
     color:#a0a0a0;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -285,6 +286,18 @@ nav a{
     font-size: 0.75rem;
     margin-right: 5px;
 }
+@media screen and (max-width:1200px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .sidebar{
+        position: static;
+        height: auto;
+    }
+}
+
 @media screen and (max-width:750px) {
     .project-container{
         grid-template-columns: 1fr;
@@ -298,11 +311,15 @@ nav a{
 
     .sidebar{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        height: auto;
-        position: static;
-
+        justify-content: center;
+        gap: 40px;
     }
+}
+
+.social a {
+  display: inline-flex;
+}
+
+.social a img {
+  display: block;
 }
